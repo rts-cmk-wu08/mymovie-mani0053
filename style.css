@@ -1,26 +1,199 @@
 /* google font link */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Mulish', sans-serif;
-    font-size: 16px;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
 }
 .wrapper {
-    max-width: 375px; /*sidens størrelse*/
-    margin: 0 auto;
+  max-width: 375px; /*sidens størrelse*/
+  margin: 0 auto;
+  background-color: antiquewhite;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-.info{
+/*icon*/
+/*.icon {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.time {
+  font-size: 15px;
+  font-family: "Mulish", sans-serif;
+  margin-left: 2em;
+  font-weight: 700;
+}
+.signal {
+  margin-left: 6em;
+}
+.fa-solid {
+  padding-left: 8px;
+}*/
+/* header */
+.header h1 {
+  font-size: 16px;
+  font-family: "Merriweather", serif;
+  color: #110e47;
+}
+/*button*/
+
+
+/* .header a{
+    width: 38px;
+    height: 21px;
+} */
+
+/* now showing section */
+/* now showing header*/
+.nheader {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 16px;
+}
+.nheader a {
+  margin-left: 11em;
+  width: 61px;
+  height: 21px;
+  font-size: 10px;
+  border-style: solid;
+  border-width: thin;
+  color: #aaa9b1;
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-top: 2px;
+  text-decoration: none;
+}
+.nheader h2 {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  color: #110e47;
+  margin-bottom: 10px;
+}
+
+/* .infonow{
+    overflow-x:auto;
+} */
+.scrollside {
+  display: flex;
+  overflow-x: auto;
+}
+.now-article {
+  margin-left: 1.3em;
+}
+
+.now-article img {
+  width: 143px;
+  height: 212px;
+  border-radius: 7px;
+}
+
+.now-article h3 {
+  font-size: 14px;
+}
+.nowlink {
+  text-decoration: none;
+}
+.ratenow {
+  font-size: 12px;
+  color: #9c9c9c;
+}
+
+/*footer*/
+span {
+  margin-left: 5em;
+}
+/* .footericon{
+    margin-left: 5em;
+    padding-left: ;
+} */
+.fa-bookmark,
+.fa-ticket {
+  color: #d8d8d8;
+}
+
+/* popular section*/
+.poplink {
+  text-decoration: none;
+}
+.pheader {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+.pheader a {
+  margin-left: 11em;
+  width: 61px;
+  height: 21px;
+  font-size: 10px;
+  border-style: solid;
+  border-width: thin;
+  color: #aaa9b1;
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-top: 2px;
+  text-decoration: none;
+}
+.pheader h2 {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  color: #110e47;
+  margin-bottom: 10px;
+}
+.movie-article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 16px;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+  /* width: 305px;
+    height: 120px; */
+}
+.fa-star {
+  color: #ffc319;
+}
+.movie-article img {
+  width: 85px;
+  height: 120px;
+  border-radius: 5px;
+}
+.movie-article h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.genre_pill {
+  /* width: 63px;
+    height: 18px; */
+  font-size: 8px;
+  background-color: #dbe3ff;
+  color: #88a4e8;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+/* .popular{
+    width: 327px;
+} */
+.ratepop {
+  font-size: 12px;
+  color: #9c9c9c;
+}
+/* .info{
+    margin-left: 2em;
+    margin-right: 2em;
+} */
+/* .info{
     display: grid;
     grid-template-rows: 2;
 }
@@ -33,4 +206,4 @@ img {
 
 .title{
     font-size: 14px;
-}
+} */
