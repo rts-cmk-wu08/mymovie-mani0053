@@ -39,12 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   headerElm.innerHTML = `
   <h1>MyMovies</h1>
   <!-- <button>switch</button> -->
-  <div>
-    <input type="checkbox" class="checkbox" id="checkbox">
-    <label for="checkbox" class="label">
-      <div class="ball">
-      </label>
-  </div>
+  <button class="button" data-mode="light">Light</button>
+  <button class="button" data-mode="dark" >Dark</button>
   `;
 
 
