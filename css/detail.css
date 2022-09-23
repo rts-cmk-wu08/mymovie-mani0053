@@ -37,18 +37,6 @@ img {
     font-size: 12px;
     color: #9C9C9C;
 }
-/*genres*/
-.genre_pill {
-    /* width: 63px;
-      height: 18px; */
-    font-size: 8px;
-    background-color: #dbe3ff;
-    color: #88a4e8;
-    border-radius: 10px;
-    padding: 5px;
-    margin-left: 2px;
-    margin-right: 2px;
-}
 
 .fa-star {
     color: #ffc319;

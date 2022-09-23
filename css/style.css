@@ -40,46 +40,58 @@ img {
   padding-left: 8px;
 }*/
 /* header */
+.header{
+  display: flex;
+  margin-top: 2em;
+}
 .header h1 {
   font-size: 16px;
   font-family: "Merriweather", serif;
   color: #110e47;
 }
 /*DARKMODE SWITCH BUTTON*/
-body.dark{
-    background-color: #292c35;
-}
-.checkbox{
-    opacity:0;
-    position:absolute;
+
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
 }
 
-.label{
-    width:50px;
-    height: 26px;
-    background-color: #111;
-    display: flex;
-    border-radius: 50px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    transform: scale(1.5);
+.label {
+  width: 38px;
+  height: 21px;
+  background-color:#aaa9b1;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1);
 }
 
-.ball{
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 50%;
-    transition: transform 0.25 linear;
+.ball {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.3s linear;
 }
+
+/*  target the elemenent after the label*/
 .checkbox:checked + .label .ball{
-    transform: translateX(24px);
+  transform: translateX(16px);
 }
+
+
+
+
+
+
+
 
 
 
@@ -160,6 +172,7 @@ span {
 /* popular section*/
 .poplink {
   text-decoration: none;
+  color: black;
 }
 .pheader {
   display: grid;
@@ -206,17 +219,6 @@ span {
 .movie-article h3 {
   font-size: 14px;
   font-weight: 700;
-}
-.genre_pill {
-  /* width: 63px;
-    height: 18px; */
-  font-size: 8px;
-  background-color: #dbe3ff;
-  color: #88a4e8;
-  border-radius: 10px;
-  padding: 5px;
-  margin-left: 2px;
-  margin-right: 2px;
 }
 /* .popular{
     width: 327px;
