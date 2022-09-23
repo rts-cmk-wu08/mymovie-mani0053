@@ -35,13 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   
     //footer
-    footerElm.innerHTML = `
+    /*footerElm.innerHTML = `
     <p class="footericon">
     <span><i class="fa-solid fa-film"></i></span>
     <span><i class="fa-solid fa-ticket"></i></span>
     <span><i class="fa-regular fa-bookmark"></i></span>
   </p>
-    `;
+    `;*/
   
     //about-movie
   
@@ -78,11 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="three">
             <p class="titlegrey">Language</p>
-            <p class="infoblue">${data.original_language}</p>
+            <p class="infoblue">${data.spoken_languages[0].name}</p>
           </div>
           <div class="three">
-          <p class="titlegrey">Rating</p>
-          <p class="infoblue"></p>
+          <p class="titlegrey">Year</p>
+          <p class="infoblue">${data.release_date}</p>
           </div>
       </section>
   
