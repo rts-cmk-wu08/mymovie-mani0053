@@ -1,5 +1,5 @@
 /* google font link */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   padding: 0;
@@ -12,7 +12,7 @@ body {
   font-size: 16px;
 }
 .wrapper {
-  max-width: 375px; /*sidens størrelse*/
+  max-width: 375px;
   margin: 0 auto;
   background-color: antiquewhite;
 }
@@ -20,7 +20,7 @@ body {
 img {
   width: 100%;
   height: auto;
-}
+} */
 .about-article{
     margin: 1em;
 }
@@ -33,14 +33,14 @@ img {
 .about-article h3{
     margin-right: 3em;
 }
-.ratenow{
+/* .ratenow{
     font-size: 12px;
     color: #9C9C9C;
-}
+} */
 
-.fa-star {
+/* .fa-star {
     color: #ffc319;
-}
+} */
 
 /*3 things*/
 .three{

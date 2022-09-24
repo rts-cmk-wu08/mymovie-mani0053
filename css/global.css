@@ -1,3 +1,27 @@
+/* google font link */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+}
+.wrapper {
+  max-width: 375px; /*sidens størrelse*/
+  margin: 0 auto;
+  /* background-color: antiquewhite; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 /*Darkmode switch*/
 .checkbox {
   opacity: 0;
@@ -35,8 +59,6 @@
 
 /*Genres pills*/
 .genre_pill {
-  /* width: 63px;
-      height: 18px; */
   font-size: 8px;
   background-color: #dbe3ff;
   color: #88a4e8;
@@ -44,4 +66,14 @@
   padding: 5px;
   margin-left: 2px;
   margin-right: 2px;
+}
+
+/*Star*/
+.fa-star {
+  color: #ffc319;
+}
+
+.ratenow {
+  font-size: 12px;
+  color: #9c9c9c;
 }
