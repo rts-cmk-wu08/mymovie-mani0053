@@ -70,7 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
       let article = document.createElement("article");
       article.classList.add("about-article");
       article.innerHTML = `
+      <div class="titlebook">
         <h3>${data.title}</h3>
+        <i class="fa-regular fa-bookmark"></i>
+    </div>
         <p class="ratenow"><i class="fa-solid fa-star"></i>${
           data.vote_average
         }/10 IMDb</p>
@@ -96,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="des">${data.overview}</p>
         <div class="castdes"> 
         <h2>Cast</h2>
-        <a href ="#">See more</a>
+        <a class="more" href ="#">See more</a>
         <div>
   
         `;
@@ -133,9 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           data.cast.forEach((person, index) => {
             let div = document.createElement("div");
-            div.classList.add("movie-cast");
             div.innerHTML = `
-            
             <img src="https://image.tmdb.org/t/p/w500${person.profile_path}" alt="${person.original_name}"/>
             <p>${person.original_name}</p>
             

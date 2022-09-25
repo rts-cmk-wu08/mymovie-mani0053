@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   headerElm.innerHTML = `
   <h1>MyMovies</h1>
   <!-- <button>switch</button> -->
-<div class="">
+<div class="button">
     <input type="checkbox" class="checkbox" id="checkbox">
   <label for="checkbox" class="label">
     <div class='ball'></div>
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let nowHeader = document.createElement("header");
   nowHeader.classList.add("nheader");
   nowHeader.innerHTML = `<h2>Now showing</h2>
-  <a href ="#">See more</a>`;
+  <a class="more" href ="#">See more</a>`;
   nowElm.append(nowHeader);
 
   //div article now
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
   popularHeader.classList.add("pheader");
   popularHeader.innerHTML = `
   <h2>Popular</h2>
-  <a href ="#">See more</a>
+  <a class="more" href ="#">See more</a>
   `;
   popularElm.append(popularHeader);
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let article = document.createElement("article");
         article.classList.add("movie-article");
         article.innerHTML = ` 
-        <a class="poplink" href="detail.html">
+        <a class="poplink" href="detail.html?id=${movie.id}">
         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster"/>
         <div class="infopop">
             <h3>${movie.title}</h3>
