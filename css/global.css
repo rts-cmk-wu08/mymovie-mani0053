@@ -11,7 +11,7 @@ body {
   font-size: 16px;
 }
 .wrapper {
-  max-width: 375px; /*sidens størrelse*/
+  /* max-width: 375px; */
   margin: 0 auto;
   /* background-color: antiquewhite; */
 }
@@ -52,7 +52,6 @@ img {
 }
 
 /*START GENTRES PILLS*/
-
 .genre_pill {
   font-size: 8px;
   background-color: #dbe3ff;
@@ -64,7 +63,6 @@ img {
 }
 
 /*Stars*/
-
 .fa-star {
   color: #ffc319;
 }
@@ -72,7 +70,6 @@ img {
   font-size: 12px;
   color: #9c9c9c;
 }
-
 .more {
   width: 61px;
   height: 21px;

@@ -6,6 +6,9 @@
   display: grid;
   grid-template-columns: minmax(100px, 300px) minmax(0, 1fr);
   margin-bottom: 10px;
+  margin-top: 1em;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 .fa-bookmark {
   margin-left: 1.5em;
@@ -16,9 +19,6 @@
 .genres {
   margin-bottom: 1em;
   margin-left: -4px;
-}
-.about-article {
-  margin: 1.3em;
 }
 .about-article h2 {
   font-size: 16px;
@@ -43,7 +43,7 @@
   font-weight: 600;
 }
 
-/*description*/
+/*START DESCRIPTION*/
 
 .des {
   color: #9c9c9c;
@@ -54,15 +54,10 @@
   margin-bottom: 1em;
 }
 
-/*cast*/
+/*START CAST*/
 
-.cast {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
-      0,
-      1fr
-    );
-  padding-left: 1.3em;
+.cast{
+    margin-top: 2em;
 }
 .cast p {
   font-size: 12px;
@@ -72,11 +67,36 @@
   height: 72px;
   border-radius: 5px;
 }
-
+.more{
+    grid-column-start: 4;
+}
 .castdes {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 300);  
 }
-.castdes a {
-  margin-left: 10em;
+
+/*BUTTON WITH FUNCTIONS*/
+.poster {
+  position: relative;
+}
+.btnfun {
+  position: absolute;
+  width: 90%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 4em;
+  padding-left: 3em;
+}
+.space {
+  position: absolute;
+  border-radius: 20px 20px 0 0;
+  z-index: 99;
+  top: 35rem;
+  padding: 0 1.2em;
+}
+.fa-arrow-left {
+  color: white;
 }

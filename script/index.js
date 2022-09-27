@@ -11,11 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //wrapper
   let wrapperElm = document.querySelector(".wrapper");
 
-  //icon div
-  /*let iconElm = document.createElement("div");
-  iconElm.classList.add("icon");
-  wrapperElm.append(iconElm);*/
-
   //header
   let headerElm = document.createElement("header");
   headerElm.classList.add("header");
@@ -29,35 +24,24 @@ document.addEventListener("DOMContentLoaded", () => {
   let footerElm = document.createElement("footer");
   wrapperElm.append(footerElm);
 
-  //icon in header
-  /*iconElm.innerHTML = `
-  <p class="time">9:41</p>
-  <p class="signal" ><i class="fa-sharp fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></p>
-  `;*/
-
   //header
   headerElm.innerHTML = `
   <h1>MyMovies</h1>
   <!-- <button>switch</button> -->
-<div class="button">
+  <div class="button">
     <input type="checkbox" class="checkbox" id="checkbox">
   <label for="checkbox" class="label">
     <div class='ball'></div>
   </label>
-</div>
-
+  </div>
   `;
-
 
   //footer
   footerElm.innerHTML = `
   <p class="footericon">
   <span><i class="fa-solid fa-film"></i></span>
   <span><i class="fa-solid fa-ticket"></i></span>
-  <span><i class="fa-regular fa-bookmark"></i></span>
-</p>
-
-  `;
+  <span><i class="fa-regular fa-bookmark"></i></span></p>`;
 
   //Now showing section
   let nowElm = document.createElement("section");
@@ -76,9 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
   nowMovies.classList.add("scrollside");
   nowElm.append(nowMovies);
 
+  //FETCH
   fetch(`${baseURL}/movie/now_playing?api_key=${apikey}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       data.results.forEach((movie) => {
         let article = document.createElement("article");
         article.classList.add("now-article");
@@ -93,8 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  // popular section
 
+  // START POPULAR SECTION
   let popularElm = document.createElement("section");
   popularElm.classList.add("popular");
   mainElm.append(popularElm);
@@ -112,24 +98,25 @@ document.addEventListener("DOMContentLoaded", () => {
   let popularMovies = document.createElement("div");
   popularElm.append(popularMovies);
 
+  //FETCH
   fetch(`${baseURL}/movie/popular?api_key=${apikey}`)
-    .then((response) => response.json())
-    .then((data) => {
-      data.results.forEach((movie) => {
-        let article = document.createElement("article");
-        article.classList.add("movie-article");
-        article.innerHTML = ` 
-        <a class="poplink" href="detail.html?id=${movie.id}">
-        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster"/>
-        <div class="infopop">
-            <h3>${movie.title}</h3>
-            <p class="ratepop"><i class="fa-solid fa-star"></i>   ${movie.vote_average}/10 IMDb</p>
-            <p class="genres"></p>
-      </a>
-      </div>
-        
-        `;
-        popularMovies.append(article);
+  .then((response) => response.json())
+  .then((data) => {
+    data.results.forEach((movie) => {
+      let article = document.createElement("article");
+      article.classList.add("movie-article");
+      article.innerHTML = ` 
+      <a class="poplink" href="detail.html?id=${movie.id}">
+      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster"/>
+      <div class="infopop">
+          <h3>${movie.title}</h3>
+          <p class="ratepop"><i class="fa-solid fa-star"></i>   ${movie.vote_average}/10 IMDb</p>
+          <p class="genres"></p>
+    </a>
+    </div>
+      
+      `;
+      popularMovies.append(article);
 
         // genres blue pills
         let genreElm = article.querySelector(".genres");
@@ -144,8 +131,3 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 });
-
-/*
-opretter en en wrapper i html fil hvor vi opretter de andre tags i js og append til wrapper som findes i html
-skrive kommentar til linier
-*/

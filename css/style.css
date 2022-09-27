@@ -38,7 +38,6 @@
 }
 
 /* now showing movies*/
-
 .scrollside {
   display: flex;
   overflow-x: auto;
@@ -60,7 +59,6 @@
 }
 
 /* START POPULAR SECTION*/
-
 .poplink {
   text-decoration: none;
   color: black;
@@ -94,7 +92,6 @@
 }
 .movie-article {
   display: grid;
-  /* grid-template-columns: repeat(2, 100px); */
   grid-template-columns: minmax(20px, auto) 1fr;
   margin-bottom: 16px;
   margin-left: 1.3em;
@@ -122,8 +119,8 @@
 .genre_pill{
   margin-top: 1em;
 }
-/*footer*/
 
+/*FOOTER*/
 span {
   margin-left: 5em;
 }
