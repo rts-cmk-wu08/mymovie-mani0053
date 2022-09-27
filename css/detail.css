@@ -1,0 +1,102 @@
+/* google font link */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.titlebook {
+  display: grid;
+  grid-template-columns: minmax(100px, 300px) minmax(0, 1fr);
+  margin-bottom: 10px;
+  margin-top: 1em;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.fa-bookmark {
+  margin-left: 1.5em;
+}
+.ratenow {
+  margin-bottom: 0.7em;
+}
+.genres {
+  margin-bottom: 1em;
+  margin-left: -4px;
+}
+.about-article h2 {
+  font-size: 16px;
+  font-family: "Merriweather", serif;
+  color: #110e47;
+}
+.about-article h3 {
+  margin-right: 3em;
+}
+.sinfo {
+  display: flex;
+  margin-bottom: 1em;
+  justify-content: space-between;
+}
+.titlegrey {
+  color: #9c9c9c;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.infoblue {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/*START DESCRIPTION*/
+
+.des {
+  color: #9c9c9c;
+  line-height: 22px;
+  letter-spacing: 2%;
+  font-size: 12px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/*START CAST*/
+
+.cast{
+    margin-top: 2em;
+}
+.cast p {
+  font-size: 12px;
+}
+.cast img {
+  width: 72px;
+  height: 72px;
+  border-radius: 5px;
+}
+.more{
+    grid-column-start: 4;
+}
+.castdes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 300);  
+}
+
+/*BUTTON WITH FUNCTIONS*/
+.poster {
+  position: relative;
+}
+.btnfun {
+  position: absolute;
+  width: 90%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 4em;
+  padding-left: 3em;
+}
+.space {
+  position: absolute;
+  border-radius: 20px 20px 0 0;
+  z-index: 99;
+  top: 35rem;
+  padding: 0 1.2em;
+}
+.fa-arrow-left {
+  color: white;
+}

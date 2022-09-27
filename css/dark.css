@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    color: white;
+}
+.label{
+    background-color: white;
+}
+.ball{
+    background-color: black;
+}
+.header h1, .nheader h2, .pheader h2{
+    color: #DBE3FF;
+}
+.now-article h3, .poplink{
+    color: #F0EFFA;
+}
+
+.about-article h2, .cast p{
+    color: #DBE3FF;
+}
