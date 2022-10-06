@@ -1,5 +1,7 @@
 import { genres } from "./genres.js";
 import { makeElement } from "./modules/makeElement.js";
+import header from "./modules/header.js"
+import popularHeader from "./modules/popularHeader.js"
 
 //console.log(genres)
 //SKRIVER/TILFØJER "api_key=" for at GØRE DET NEMMERE AT CONCANTENAT I API_URL
@@ -16,8 +18,8 @@ let wrapperElm = document.querySelector(".wrapper");
 //header
 // let headerElm = document.createElement("header");
 // headerElm.classList.add("header");
-let headerElm = makeElement("header", "header");
-wrapperElm.append(headerElm);
+// let headerElm = makeElement("header", "header");
+wrapperElm.append(header());
 
 //main
 let mainElm = document.createElement("main");
@@ -28,16 +30,16 @@ let footerElm = document.createElement("footer");
 wrapperElm.append(footerElm);
 
 //header
-headerElm.innerHTML = `
-  <h1>MyMovies</h1>
-  <!-- <button>switch</button> -->
-  <div class="button">
-    <input type="checkbox" class="checkbox" id="checkbox">
-  <label for="checkbox" class="label">
-    <div class='ball'></div>
-  </label>
-  </div>
-  `;
+// headerElm.innerHTML = `
+//   <h1>MyMovies</h1>
+//   <!-- <button>switch</button> -->
+//   <div class="button">
+//     <input type="checkbox" class="checkbox" id="checkbox">
+//   <label for="checkbox" class="label">
+//     <div class='ball'></div>
+//   </label>
+//   </div>
+//   `;
 
 //footer
 footerElm.innerHTML = `
@@ -83,18 +85,20 @@ fetch(`${baseURL}/movie/now_playing?api_key=${apikey}`)
   });
 
 // START POPULAR SECTION
-let popularElm = document.createElement("section");
-popularElm.classList.add("popular");
+// let popularElm = document.createElement("section");
+// popularElm.classList.add("popular");
+let popularElm = makeElement("section", "popular")
 mainElm.append(popularElm);
 
 // header in popular section
-let popularHeader = document.createElement("header");
-popularHeader.classList.add("pheader");
-popularHeader.innerHTML = `
-  <h2>Popular</h2>
-  <a class="more" href ="#">See more</a>
-  `;
-popularElm.append(popularHeader);
+// let popularHeader = document.createElement("header");
+// popularHeader.classList.add("pheader");
+// popularHeader.innerHTML = `
+//   <h2>Popular</h2>
+//   <a class="more" href ="#">See more</a>
+//   `;
+//indsæt () den lilla farve for at eksekver/execute
+popularElm.append(popularHeader());
 
 // div article popular
 let popularMovies = document.createElement("div");
