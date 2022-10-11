@@ -1,14 +1,14 @@
 
-let popularHeader = function () {
+let sectionHeader = function (text) {
     let element = document.createElement("header")
     element.classList.add("pheader");
 
     element.innerHTML = `
-    <h2>Popular</h2>
+    <h2>${text}</h2>
     <a class="more" href ="#">See more</a>
     `
 
     return element;
 
 }
-export default popularHeader;
+export default sectionHeader;

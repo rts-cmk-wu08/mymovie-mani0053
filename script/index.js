@@ -1,8 +1,8 @@
 import { genres } from "./genres.js";
 import { makeElement } from "./modules/makeElement.js";
 import header from "./modules/header.js"
-import popularHeader from "./modules/popularHeader.js"
-
+import sectionHeader from "./modules/sectionHeader.js"
+import genreSpan from "./modules/genreSpan.js"
 //console.log(genres)
 //SKRIVER/TILFØJER "api_key=" for at GØRE DET NEMMERE AT CONCANTENAT I API_URL
 let apikey = "b2601cf496196721c371fdce348807c0";
@@ -20,6 +20,7 @@ let wrapperElm = document.querySelector(".wrapper");
 // headerElm.classList.add("header");
 // let headerElm = makeElement("header", "header");
 wrapperElm.append(header());
+wrapperElm.append(sectionHeader("HEJJJJ"))
 
 //main
 let mainElm = document.createElement("main");
@@ -98,7 +99,7 @@ mainElm.append(popularElm);
 //   <a class="more" href ="#">See more</a>
 //   `;
 //indsæt () den lilla farve for at eksekver/execute
-popularElm.append(popularHeader());
+popularElm.append(sectionHeader("Popular"));
 
 // div article popular
 let popularMovies = document.createElement("div");
@@ -127,12 +128,12 @@ fetch(`${baseURL}/movie/popular?api_key=${apikey}`)
       // genres blue pills
       let genreElm = article.querySelector(".genres");
       movie.genre_ids.forEach((id) => {
-        let currentGenre = genres.find((genre) => genre.id == id);
-        console.log(currentGenre);
-        let genreSpan = document.createElement("span");
-        genreSpan.classList.add("genre_pill");
-        genreSpan.innerText = currentGenre.name;
-        genreElm.append(genreSpan);
+        // let currentGenre = genres.find((genre) => genre.id == id);
+        // console.log(currentGenre);
+        // let genreSpan = document.createElement("span");
+        // genreSpan.classList.add("genre_pill");
+        // genreSpan.innerText = currentGenre.name;
+        genreElm.append(genreSpan(id));
       });
     });
   });
